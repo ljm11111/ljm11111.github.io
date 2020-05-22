@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="成功搭建github博客">
+    <meta name="description" content="1、需要安装的软件  node.js  git fro windows  hexo  sublime text    2、搭建的步骤 1、创建一个github域名，这个域名就是你以后博客的网址。 2、设置一个ssh key，这样的话才能把把本地的内容通过github账户上传到自己的博客上面。 3、通过sublime text编写本地的网站的一些具体信息。 4、把本地编写的内容通过hexo上传到gi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="成功搭建博客">
+<meta property="og:title" content="用hexo在github上搭建静态博客">
 <meta property="og:url" content="https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="ljm11111的博客">
-<meta property="og:description" content="成功搭建github博客">
+<meta property="og:description" content="1、需要安装的软件  node.js  git fro windows  hexo  sublime text    2、搭建的步骤 1、创建一个github域名，这个域名就是你以后博客的网址。 2、设置一个ssh key，这样的话才能把把本地的内容通过github账户上传到自己的博客上面。 3、通过sublime text编写本地的网站的一些具体信息。 4、把本地编写的内容通过hexo上传到gi">
 <meta property="article:published_time" content="2020-05-17T09:22:22.000Z">
-<meta property="article:modified_time" content="2020-05-17T10:03:39.591Z">
+<meta property="article:modified_time" content="2020-05-22T15:58:35.946Z">
 <meta property="article:author" content="ljm">
 <meta name="twitter:card" content="summary">
     
@@ -35,7 +35,7 @@
         
     
     <!-- title -->
-    <title>成功搭建博客</title>
+    <title>用hexo在github上搭建静态博客</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
@@ -126,20 +126,20 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&text=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&is_video=false&description=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=成功搭建博客&body=Check out this article: https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&name=成功搭建博客&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&text=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&is_video=false&description=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=用hexo在github上搭建静态博客&body=Check out this article: https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&name=用hexo在github上搭建静态博客&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#成功搭建github博客"><span class="toc-number">1.</span> <span class="toc-text">成功搭建github博客</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、需要安装的软件"><span class="toc-number">1.</span> <span class="toc-text">1、需要安装的软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、搭建的步骤"><span class="toc-number">2.</span> <span class="toc-text">2、搭建的步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、遇到的一个问题"><span class="toc-number">3.</span> <span class="toc-text">3、遇到的一个问题</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -151,7 +151,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        成功搭建博客
+        用hexo在github上搭建静态博客
     </h1>
 
 
@@ -173,7 +173,28 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="成功搭建github博客"><a href="#成功搭建github博客" class="headerlink" title="成功搭建github博客"></a>成功搭建github博客</h2>
+    <h2 id="1、需要安装的软件"><a href="#1、需要安装的软件" class="headerlink" title="1、需要安装的软件"></a>1、需要安装的软件</h2><hr>
+<ul>
+<li><p>node.js</p>
+</li>
+<li><p>git fro windows</p>
+</li>
+<li><p>hexo</p>
+</li>
+<li><p>sublime text</p>
+</li>
+</ul>
+<hr>
+<h2 id="2、搭建的步骤"><a href="#2、搭建的步骤" class="headerlink" title="2、搭建的步骤"></a>2、搭建的步骤</h2><hr>
+<p>1、创建一个github域名，这个域名就是你以后博客的网址。</p>
+<p>2、设置一个ssh key，这样的话才能把把本地的内容通过github账户上传到自己的博客上面。</p>
+<p>3、通过sublime text编写本地的网站的一些具体信息。</p>
+<p>4、把本地编写的内容通过hexo上传到github的博客当中</p>
+<p>5、最后你还能在hexo的官网找喜欢的皮肤装上</p>
+<hr>
+<h2 id="3、遇到的一个问题"><a href="#3、遇到的一个问题" class="headerlink" title="3、遇到的一个问题"></a>3、遇到的一个问题</h2><hr>
+<p>在我使用npm install命令的时候出现”Unexpected end of JSON<br>input while parsing near”的错误，百度过后用<br>‘npm cache clean –force’这个命令解决了。</p>
+
   </div>
 </article>
 
@@ -199,21 +220,21 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#成功搭建github博客"><span class="toc-number">1.</span> <span class="toc-text">成功搭建github博客</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、需要安装的软件"><span class="toc-number">1.</span> <span class="toc-text">1、需要安装的软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、搭建的步骤"><span class="toc-number">2.</span> <span class="toc-text">2、搭建的步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、遇到的一个问题"><span class="toc-number">3.</span> <span class="toc-text">3、遇到的一个问题</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&text=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&is_video=false&description=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=成功搭建博客&body=Check out this article: https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=成功搭建博客" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&name=成功搭建博客&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&text=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&is_video=false&description=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=用hexo在github上搭建静态博客&body=Check out this article: https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&title=用hexo在github上搭建静态博客" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ljm11111.github.io/2020/05/17/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/&name=用hexo在github上搭建静态博客&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
