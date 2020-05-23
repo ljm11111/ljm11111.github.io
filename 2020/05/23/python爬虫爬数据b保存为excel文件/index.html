@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="python 模块  lxml.html openpyxl requests  之前导出文件的格式都是txt，感觉看起来很麻烦，这次想要使用excel导出试试看，稍微简单的爬了一下豆瓣top250的电影。  代码 import requests   from openpyxl import workbook from openpyxl import load_workbook import lxm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python爬虫爬数据b保存为excel文件">
+<meta property="og:url" content="https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:site_name" content="ljm11111的博客">
+<meta property="og:description" content="python 模块  lxml.html openpyxl requests  之前导出文件的格式都是txt，感觉看起来很麻烦，这次想要使用excel导出试试看，稍微简单的爬了一下豆瓣top250的电影。  代码 import requests   from openpyxl import workbook from openpyxl import load_workbook import lxm">
+<meta property="og:image" content="https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/tupian%5Cexecl.png">
+<meta property="article:published_time" content="2020-05-23T14:16:57.000Z">
+<meta property="article:modified_time" content="2020-05-23T14:44:47.962Z">
+<meta property="article:author" content="ljm">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/tupian%5Cexecl.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>python爬虫爬数据b保存为excel文件</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+
+    
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    
+<script src="/lib/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">ljm11111的博客</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/home/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/tzvetkov75" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2020/05/23/%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/" target="_blank" rel="noopener"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&text=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&title=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&is_video=false&description=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=python爬虫爬数据b保存为excel文件&body=Check out this article: https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&title=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&title=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&title=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&title=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&name=python爬虫爬数据b保存为excel文件&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#python-模块"><span class="toc-number">1.</span> <span class="toc-text">python 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导出execl成果"><span class="toc-number">3.</span> <span class="toc-text">导出execl成果</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        python爬虫爬数据b保存为excel文件
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">ljm11111的博客</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2020-05-23T14:16:57.000Z" itemprop="datePublished">2020-05-23</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="python-模块"><a href="#python-模块" class="headerlink" title="python 模块"></a>python 模块</h3><hr>
+<ul>
+<li>lxml.html</li>
+<li>openpyxl</li>
+<li>requests</li>
+</ul>
+<p>之前导出文件的格式都是txt，感觉看起来很麻烦，这次想要使用excel导出试试看，稍微简单的爬了一下豆瓣top250的电影。</p>
+<hr>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><hr>
+<pre><code>import requests  
+from openpyxl import workbook
+from openpyxl import load_workbook
+import lxml.html
+
+def url_open(url):
+    headers ={
+        &apos;User-Agent&apos;:&apos;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3741.400 QQBrowser/10.5.3863.400&apos;,
+        }
+    html = requests.get(url,headers=headers).text
+    return html
+
+def content(html):
+    tree = lxml.html.fromstring(html)
+    td = tree.cssselect(&apos;div.hd&apos;)
+    tt = tree.cssselect(&apos;p span.inq&apos;)
+    pp = tree.cssselect(&apos;span.rating_num&apos;)
+    pj = []
+    name = []
+    text = []
+    for i in td:
+        i=i.text_content().strip().split(&apos;/&apos;)[0]
+        name.append(i)
+
+    for t in tt:
+        t=t.text_content()
+        text.append(t)
+
+    for a in pp:
+        a =a.text_content()
+        pj.append(a)
+
+    for b in range(25):
+        if len(text)&lt;25 :
+            for h in range(25-len(text)):
+                text.append(&apos;最后25个电影中有些无内容，顺序会错乱，需要核对&apos;)
+        ws.append([name[b],text[b],pj[b]])
+
+def get_250():
+    for i in range(10):
+        url=&apos;https://movie.douban.com/top250?start=&apos;+str(i*25)+&apos;&amp;filter=&apos;
+        html = url_open(url)
+        content(html)
+
+if __name__==&apos;__main__&apos;:
+    url=&apos;https://movie.douban.com/top250?start=0&amp;filter=&apos;
+    html = url_open(url)
+    wb = workbook.Workbook()
+    ws = wb.active
+    ws.append([&apos;电影名&apos;,&apos;内容&apos;,&apos;评价&apos;])
+    get_250()
+    wb.save(&apos;test.xlsx&apos;)</code></pre><hr>
+<h3 id="导出execl成果"><a href="#导出execl成果" class="headerlink" title="导出execl成果"></a>导出execl成果</h3><hr>
+<p><img src="tupian%5Cexecl.png" alt=""></p>
+
+  </div>
+</article>
+
+
+
+      </div>
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/home/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/tzvetkov75" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#python-模块"><span class="toc-number">1.</span> <span class="toc-text">python 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导出execl成果"><span class="toc-number">3.</span> <span class="toc-text">导出execl成果</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&text=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&title=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&is_video=false&description=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=python爬虫爬数据b保存为excel文件&body=Check out this article: https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&title=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&title=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&title=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&title=python爬虫爬数据b保存为excel文件" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ljm11111.github.io/2020/05/23/python%E7%88%AC%E8%99%AB%E7%88%AC%E6%95%B0%E6%8D%AEb%E4%BF%9D%E5%AD%98%E4%B8%BAexcel%E6%96%87%E4%BB%B6/&name=python爬虫爬数据b保存为excel文件&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 ljm
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/home/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/tzvetkov75" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+      
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+    </div>
+</body>
+</html>
